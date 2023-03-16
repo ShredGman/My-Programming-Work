@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+    <script src="scripts.js"></script>
+    <link rel="shortcut icon" href="./images/icon.png" type="image">
+    <title>Home | ZMW Technologies</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" onclick="toggleModal('login')" id="login-btn">Login</a></li>
+                <li><a href="#" onclick="toggleModal('signup')" id="signup-btn">Sign Up</a></li>
+                <div class="nav-right">
+                    <li><a href="#" id="admin-btn">Admin Dashboard</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                    <li><a href="#"><img src="images/user.png" id="user-pfp"></a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="website-description">
+            <h1>ZMW Technologies</h1>
+            <p>ZMW Technologies is a web development and security company dedicated to delivering high-quality and secure web solutions to businesses.</p>
+        </section>
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-container">
+                <div class="product product-1">
+                    <img src="productimgs/product1.jpg" alt="Product 1">
+                    <h3>Fully Functioning Website</h3>
+                    <p>Our team at ZMW Technologies creates fully functioning websites that are tailored to meet your business needs. We work with you every step of the way to ensure that your website is optimized for user experience and search engine ranking. Let us help you take your online presence to the next level.</p>
+                    <a href="product1.html" target="_self">Shop Now</a>
+                </div>
+                <div class="product product-2">
+                    <img src="productimgs/product2.jpg" alt="Product 2">
+                    <h3>Website Modifications/Fixes</h3>
+                    <p>Is your website not performing as well as it should be? Our team can help identify and fix any issues that may be impacting your website's functionality or user experience. Whether it's a minor bug or a major overhaul, we have the expertise to get your website back on track.</p>
+                    <a href="product2.html" target="_self">Shop Now</a>
+                </div>
+                <div class="product product-3">
+                    <img src="productimgs/product3.jpg" alt="Product 3">
+                    <h3>Web Security</h3>
+                    <p>Protect your website from cyber threats with our top-of-the-line web security services. Our team of experts can identify vulnerabilities in your website's code and implement the necessary measures to keep your website and your customers' data safe. Don't let hackers compromise your business – let us handle your web security needs.</p>
+                    <a href="product3.html" target="_self">Shop Now</a>
+                </div>
+            </div>
+        </section>        
+        <section class="testimonials">
+            <h2>What Our Customers Are Saying</h2>
+            <div class="testimonial">
+                <p>"I was extremely satisfied with the service provided by ZMW Technologies. They were fast, efficient, and professional. I would highly recommend them to anyone."</p>
+                <p>- John Doe</p>
+            </div>
+            <div class="testimonial">
+                <p>"ZMW Technologies went above and beyond to help me solve my technical problem. Their customer service was exceptional."</p>
+                <p>- Jane Smith</p>
+            </div>
+        </section>
+        <section class="cta">
+            <h2>Ready to Get Started?</h2>
+            <p>Sign up today to receive a free consultation and learn how we can help your business grow.</p>
+            <button>Sign Up Now</button>
+        </section>                
+    </main>
+    <div id="login-signup-modal" class="modal">
+        <div class="modal-content">
+            <div id="login-form-container">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+        <div id="signup-form-container">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <div id="admin-dashboard-modal" class="modal">
+        <div class="modal-content">
+            <div id="admin-form-container">
+                <span class="close">&times;</span>
+                <h2>Admin Dashboard</h2>
+                <p>This is the admin dashboard. You can make changes to the website here.</p>
+                <form id="admin-form">
+                        <label for="website-title">Website Title:</label>
+                        <input id="website-title" name="website-title">
+                        <label for="website-description">Website Description:</label>
+                        <textarea id="website-description" name="website-description" rows="5"></textarea>
+                        <h3>Featured Products</h3>
+                        <div class="product-form">
+                        <div class="product-drop">
+                            <details>
+                            <summary>Product 1</summary>
+                            <br>
+                            <label for="product1-name">Name:</label>
+                            <input id="product1-name" name="product1-name">
+                            <label for="product1-image">Image URL:</label>
+                            <input id="product1-image" name="product1-image">
+                            <img id="product1img-preview" src="#" alt="Product 1 Preview" style="display:none;">
+                            <label for="product1-description">Description:</label>
+                            <textarea id="product1-description" name="product1-description" rows="5"></textarea><br>
+                            </details>
+                        </div>
+                        <div class="product-drop">
+                            <details>
+                            <summary>Product 2</summary>
+                            <br>
+                            <label for="product2-name">Name:</label>
+                            <input id="product2-name" name="product2-name">
+                            <label for="product2-image">Image URL:</label>
+                            <input id="product2-image" name="product2-image">
+                            <img id="product2img-preview" src="#" alt="Product 2 Preview" style="display:none;">
+                            <label for="product2-description">Description:</label>
+                            <textarea id="product2-description" name="product2-description" rows="5"></textarea><br>
+                            </details>
+                        </div>
+                        <div class="product-drop">
+                            <details>
+                            <summary>Product 3</summary>
+                            <br>
+                            <label for="product3-name">Name:</label>
+                            <input id="product3-name" name="product3-name">
+                            <label for="product3-image">Image URL:</label>
+                            <input id="product3-image" name="product3-image">
+                            <img id="product3img-preview" src="#" alt="Product 3 Preview" style="display:none;">
+                            <label for="product3-description">Description:</label>
+                            <textarea id="product3-description" name="product3-description" rows="5"></textarea><br>
+                            </details>
+                        </div>
+                        </div>
+                    <button type="submit" class="btn admin-btn">Save Changes</button>
+                    </form>                  
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 ZMW Technologies. All rights reserved.</p>
+    </footer>
+    <script src="admin-form.js"></script>
+    <script src="modals.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

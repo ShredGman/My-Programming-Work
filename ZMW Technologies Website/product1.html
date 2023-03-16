@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="product1.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+        <script src="scripts.js"></script>
+        <link rel="shortcut icon" href="./images/icon.png" type="image">
+        <title>Purchase Full Website | ZMW Technologies</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" onclick="toggleModal('login')" id="login-btn">Login</a></li>
+                    <li><a href="#" onclick="toggleModal('signup')" id="signup-btn">Sign Up</a></li>
+                    <div class="nav-right">
+                        <li><a href="#" id="admin-btn">Admin Dashboard</a></li>
+                        <li><a href="#" id="logout-btn">Logout</a></li>
+                        <li><a href="#"><img src="images/user.png" id="user-pfp"></a></li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="product1">
+                <h1>Fully Functioning Website</h1>
+                <img src="productimgs/product1.jpg" alt="Product 1" class="product-image">
+                <p class="product-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet convallis mauris. Fusce quis magna et nisl lacinia blandit.</p>
+                <h2>Features</h2>
+                <ul class="description">
+                    <li>Customizable templates</li>
+                    <li>SEO optimization</li>
+                    <li>Responsive design</li>
+                    <li>Content management system</li>
+                </ul>
+                <h2>Pricing</h2>
+                <p class="price">$10 - $150 Based on Needs/Wants</p>
+                <button class="buy-now-button">Buy Now</button>
+            </div>
+        </main>
+        <div id="login-signup-modal" class="modal">
+            <div class="modal-content">
+                <div id="login-form-container">
+                    <span class="close">&times;</span>
+                    <h2>Login</h2>
+                    <form id="login-form">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+            <div id="signup-form-container">
+                <span class="close">&times;</span>
+                <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <div id="admin-dashboard-modal" class="modal">
+            <div class="modal-content">
+                <div id="admin-form-container">
+                    <span class="close">&times;</span>
+                    <h2>Admin Dashboard</h2>
+                    <p>This is the admin dashboard. You can make changes to the website here.</p>
+                    <form id="admin-form">
+                        <label for="website-title">Website Title:</label>
+                        <input id="website-title" name="website-title">
+                        <label for="website-description">Website Description:</label>
+                        <textarea id="website-description" name="website-description" rows="5"></textarea>
+                        <h3>Featured Products</h3>
+                        <div class="product-form">
+                        <div class="product-drop">
+                            <details>
+                            <summary>Product 1</summary>
+                            <br>
+                            <label for="product1-name">Name:</label>
+                            <input id="product1-name" name="product1-name">
+                            <label for="product1-image">Image URL:</label>
+                            <input id="product1-image" name="product1-image">
+                            <label for="product1-description">Description:</label>
+                            <textarea id="product1-description" name="product1-description" rows="5"></textarea><br>
+                            </details>
+                        </div>
+                        <div class="product-drop">
+                            <details>
+                            <summary>Product 2</summary>
+                            <br>
+                            <label for="product2-name">Name:</label>
+                            <input id="product2-name" name="product2-name">
+                            <label for="product2-image">Image URL:</label>
+                            <input id="product2-image" name="product2-image">
+                            <label for="product2-description">Description:</label>
+                            <textarea id="product2-description" name="product2-description" rows="5"></textarea><br>
+                            </details>
+                        </div>
+                        <div class="product-drop">
+                            <details>
+                            <summary>Product 3</summary>
+                            <br>
+                            <label for="product3-name">Name:</label>
+                            <input id="product3-name" name="product3-name">
+                            <label for="product3-image">Image URL:</label>
+                            <input id="product3-image" name="product3-image">
+                            <label for="product3-description">Description:</label>
+                            <textarea id="product3-description" name="product3-description" rows="5"></textarea><br>
+                            </details>
+                        </div>
+                        </div>
+                    <button type="submit" class="btn admin-btn">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <p>&copy; 2023 ZMW Technologies. All rights reserved.</p>
+    </footer>
+    <script src="admin-form.js"></script>
+    <script src="modals.js"></script>
+    <script src="scripts.js"></script>
+</html>
